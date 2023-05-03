@@ -12,11 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Get required packages
-    - uses: actions/checkout@v3
-    - uses: carlosperate/arm-none-eabi-gcc-action@v1
+    - name: Install Arm GNU Toolchain (arm-none-eabi-gcc)
+      uses: carlosperate/arm-none-eabi-gcc-action@v1
       with:
-        release: '12.2.Rel1'
+      release: '12.2.Rel1'
 
     # Build with make
     - name: make
