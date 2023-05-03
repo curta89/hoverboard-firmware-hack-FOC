@@ -14,14 +14,9 @@ jobs:
     steps:
     # Get required packages
     - uses: actions/checkout@v3
-
-     - name: Install Arm GNU Toolchain (arm-none-eabi-gcc)
-     - uses: carlosperate/arm-none-eabi-gcc-action@v1
-       with:
-         release: 'latest'
-
-      
-
+    - uses: carlosperate/arm-none-eabi-gcc-action@v1
+      with:
+        release: 'lastest'
 
     # Build with make
     - name: make
@@ -43,4 +38,3 @@ jobs:
         path: ${{github.workspace}}/.pio/build/**
         name: ${{github.event.repository.name}}_build_${{github.run_number}}
         retention-days: 5
-
