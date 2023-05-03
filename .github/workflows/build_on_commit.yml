@@ -20,8 +20,6 @@ jobs:
        with:
          release: 'latest'
 
-    - name: Install Arm GNU Toolchain (arm-none-eabi-gcc)
-    - uses: carlosperate/arm-none-eabi-gcc-action@v1
       
 
 
